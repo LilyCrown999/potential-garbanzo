@@ -1,0 +1,40 @@
+{
+  "name": "app-project1",
+  "version": "1.0.0",
+  "description": "app to create a node app that create public and private stories using cluster",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js NODE_ENV=production ",
+    "dev": "cross-env NODE_ENV=development nodemon node app"
+  },
+  "author": "Lily-Crown999",
+  "license": "MIT",
+  "dependencies": {
+    "connect-mongo": "^4.4.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "joi": "^13.7.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.14",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.7"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LilyCrown999/potential-garbanzo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LilyCrown999/potential-garbanzo/issues"
+  },
+  "homepage": "https://github.com/LilyCrown999/potential-garbanzo#readme"
+}
