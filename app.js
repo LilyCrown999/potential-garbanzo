@@ -1,15 +1,15 @@
 
-const path = require('path');
+const path = require('path')
 const express = require('express');
 const dotenv = require ('dotenv');
-const connectDB = require('./config/db');
 const exphbs = require('express-handlebars');
+const { connectDB }= require('./config/db')
 
 
 //load config 
 dotenv.config({ path: './config/config.env'});
 
-require('./config/db')();
+connectDB();
 
 const app = express();
 
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 //Routes 
 app.use('/', require('./routes/index'));
 
-const PORT =  process.env.port || 5000
+const PORT =  process.env.PORT || 5000
 
 app.listen(
     PORT,

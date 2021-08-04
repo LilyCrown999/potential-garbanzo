@@ -1,22 +1,31 @@
 
 const  mongoose = require('mongoose');
+const dotenv = require('dotenv');
 
 
-const MONGO_URL = 'mongodb://localhost:27017';
+module.exports.connectDB = async () => {
 
-module.exports = function(){
+    dotenv.config({ path: './config/config.env'});
+
+    const MONGO_URL =  process.env.MONGO_URL || 'mongodb://localhost:27017' 
+
+    try{
+
+        await mongoose.connect(MONGO_URL, {
     
+        useNewUrlParser: true ,
+        useUnifiedTopology: true ,
+        useCreateIndex: true ,
+        useFindAndModify: false
+        
+        })
 
-    mongoose.connect(MONGO_URL, {
-
-    useNewUrlParser: true ,
-    useUnifiedTopology: true ,
-    useCreateIndex: true ,
-    useFindAndModify: false
-    
-    })
-    .then(() => console.log('Connected to MongoDB...'))
-    .catch(err => console.error('Could not connect to MongoDB...'));
+        console.log(`MongoDB Connected: ${MONGO_URL}`)
+    }
+    catch(e){
+        console.error(e);
+        process.exit(1);
+    }
     
 
 } 
