@@ -1,0 +1,14 @@
+html { 
+    font-size: 62.5%;     /* 1rem = 10px */
+}
+
+body {
+    background-color: #f8f8f8;
+    font-size: 1.6rem;
+
+}
+
+.login-container{
+    width: 40rem;
+    margin-top: 5rem;
+}

@@ -25,12 +25,12 @@ app.engine('.hbs', exphbs({defaultLayout : 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
 // Static Folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Routes 
 app.use('/', route);
 
-const PORT =  process.env.PORT || 5000
+const PORT =  process.env.PORT || 5000;
 
 app.listen(
     PORT,
