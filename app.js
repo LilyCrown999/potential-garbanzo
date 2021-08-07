@@ -1,10 +1,12 @@
 
 const path = require('path')
 const express = require('express')
+const mongoose  = require('mongoose')
 const dotenv = require ('dotenv')
 const exphbs = require('express-handlebars')
 const passport = require('passport')
-const session = require('express-session')
+const session  = require('express-session')
+const MongoStore = require('connect-mongo')
 const { connectDB }= require('./config/db')
 
 
@@ -28,13 +30,20 @@ const app = express();
 //Handlebars 
 app.engine('.hbs', exphbs({defaultLayout : 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
-
 // Sessions
+
+ storeSession = MongoStore.create({
+  mongoUrl: process.env.MONGO_URL,
+  touchAfter: 24 * 3600 // time period in seconds
+})
+
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
-  saveUninitialized: false
-}))
+  saveUninitialized: false,
+  store: storeSession
+})
+)
 
 
 // Passport middleware
