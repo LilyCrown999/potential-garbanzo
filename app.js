@@ -34,6 +34,7 @@ app.set('view engine', '.hbs');
 
  storeSession = MongoStore.create({
   mongoUrl: process.env.MONGO_URL,
+  mongooseConnection: mongoose.connection,
   touchAfter: 24 * 3600 // time period in seconds
 })
 

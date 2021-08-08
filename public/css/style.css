@@ -16,3 +16,8 @@ p{
     margin-top: 5rem;
     text-align: center;
 }
+.right-align{
+        position: fixed;
+        bottom: /*AMOUNT DOWN AFTER IT ADD REM OR % OR PX */ 1rem;
+        right: 2rem;
+}
