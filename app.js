@@ -19,11 +19,11 @@ require('./config/passport')(passport);
 connectDB();
 
 const app = express();
+//  Body parser
+app.use(express.urlencoded({ extended: false}))
+app.use(express.json());
 
-
-  // app.use(express.json());
-
-//logging
+//Logging
   if(process.NODE_ENV === 'development'){
     app.use(morgan('dev'))
   }

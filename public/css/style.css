@@ -1,12 +1,14 @@
 html { 
     font-size: 62.5%;     /* 1rem = 10px */
+    /* background-color: rgb(224, 224, 224); */
+    
+    background:  url("https://media.giphy.com/media/xT9IgN8YKRhByRBzMI/giphy.gif"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-body {
-    background-color: #f8f8f8;
-    font-size: 1.6rem;
 
-}
 p{
     margin: 1rem 0 !important;
 }
@@ -16,8 +18,10 @@ p{
     margin-top: 5rem;
     text-align: center;
 }
+
 .right-align{
-        position: fixed;
-        bottom: /*AMOUNT DOWN AFTER IT ADD REM OR % OR PX */ 1rem;
-        right: 2rem;
+        position: relative;
+        top: 6rem;
+        right:2rem;
+
 }
