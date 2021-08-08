@@ -18,7 +18,7 @@ router.post('/', ensureAuth,  async (req, res) => {
         req.body.user = req.user.id 
         await Story.create(req.body)
         res.redirect('/dashboard')
-    }catch(err){
+    }catch(err){ 
         console.error(err)
         res.render('error/500')
     }
