@@ -19,6 +19,7 @@ require('./config/passport')(passport);
 connectDB();
 
 const app = express();
+
 //  Body parser
 app.use(express.urlencoded({ extended: false}))
 app.use(express.json());
@@ -27,11 +28,22 @@ app.use(express.json());
   if(process.NODE_ENV === 'development'){
     app.use(morgan('dev'))
   }
-//Handlebars 
-app.engine('.hbs', exphbs({defaultLayout : 'main', extname: '.hbs'}));
-app.set('view engine', '.hbs');
-// Sessions
+// Hamdlebars Helpers
+const { formatDate } = require('./helpers/hbs');
 
+//Handlebars 
+app.engine('.hbs',
+ exphbs({
+   helpers: {
+     formatDate,
+   },
+   defaultLayout : 'main',
+    extname: '.hbs'})
+    );
+app.set('view engine', '.hbs');
+
+
+// Sessions
  storeSession = MongoStore.create({
   mongoUrl: process.env.MONGO_URL,
   mongooseConnection: mongoose.connection,

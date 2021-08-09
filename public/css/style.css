@@ -1,14 +1,22 @@
 html { 
     font-size: 62.5%;     /* 1rem = 10px */
-    /* background-color: rgb(224, 224, 224); */
+    /* background: url('img_yummy.jpg'); */
     
-    background:  url("https://media.giphy.com/media/xT9IgN8YKRhByRBzMI/giphy.gif"); 
+   
+}
+body{
+    background:  url("https://media.giphy.com/media/xT9IgN8YKRhByRBzMI/giphy.gif"), url("img_yummy.jpg")  no-repeat; 
+    /* background-image: url("img_yummy.jpg") ; */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
-
+/* body::after {
+    background: url("img_yummy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
 p{
     margin: 1rem 0 !important;
 }
