@@ -1,22 +1,14 @@
 html { 
-    font-size: 62.5%;     /* 1rem = 10px */
-    /* background: url('img_yummy.jpg'); */
-    
-   
+    font-size: 62.5%;     /* 1rem = 10px */  
 }
+
 body{
     background:  url("https://media.giphy.com/media/xT9IgN8YKRhByRBzMI/giphy.gif"), url("img_yummy.jpg")  no-repeat; 
-    /* background-image: url("img_yummy.jpg") ; */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-/* body::after {
-    background: url("img_yummy.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} */
+
 p{
     margin: 1rem 0 !important;
 }
@@ -32,4 +24,8 @@ p{
         top: 6rem;
         right:2rem;
 
+}
+
+.fa-small{
+    font-size: 1.2rem !important
 }
