@@ -29,13 +29,15 @@ app.use(express.json());
     app.use(morgan('dev'))
   }
 // Hamdlebars Helpers
-const { formatDate } = require('./helpers/hbs');
+const { formatDate, truncate, stripTags } = require('./helpers/hbs');
 
 //Handlebars 
 app.engine('.hbs',
  exphbs({
    helpers: {
      formatDate,
+     truncate,
+     stripTags,
    },
    defaultLayout : 'main',
     extname: '.hbs'})

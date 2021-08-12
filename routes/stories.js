@@ -23,6 +23,7 @@ router.post('/', ensureAuth,  async (req, res) => {
         res.render('error/500')
     }
 })
+
 //@desc Show all stories
 //@route GET /stories/add
 router.get('/', ensureAuth, async (req, res) => {
@@ -41,7 +42,19 @@ router.get('/', ensureAuth, async (req, res) => {
     }
 })
 
+//@ desc Show Stories by Id
+//@route GET /stories/{{stories._id}}
+// router.get('/:id', ensureAuth , async (req, res) => {
+//     try { 
 
+//         // req.body/*.id*/ = req.params.id
+//         const stories =  await Story.find(req.body.id)
 
+//         res.render('stories/index',{stories})
+//     } catch (err) {
+//         console.log(err)
+//         res.render('error/500')
+//     }
+// })
 
 module.exports = router; 
