@@ -3,7 +3,7 @@ html {
 }
 
 body{
-    background:  url("https://media.giphy.com/media/xT9IgN8YKRhByRBzMI/giphy.gif"), url("img_yummy.jpg")  no-repeat; 
+    background:  url("giphy.gif"); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
