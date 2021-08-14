@@ -4,8 +4,8 @@
   "description": "app to create a node app that create public and private stories using cluster",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js NODE_ENV=production ",
-    "dev": "cross-env NODE_ENV=development nodemon node app"
+    "start": "node app.js ",
+    "dev": " nodemon NODE_ENV=development app.js"
   },
   "author": "Lily-Crown999",
   "license": "MIT",
