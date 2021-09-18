@@ -1,6 +1,6 @@
 {
   "name": "app-project1",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "app to create a node app that create public and private stories using cluster",
   "main": "app.js",
   "scripts": {

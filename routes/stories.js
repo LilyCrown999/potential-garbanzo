@@ -14,7 +14,7 @@ router.get('/add', ensureAuth, (req, res) => {
 
 // @desc Process add form
 //@route POST /stories  
-router.post('/', ensureAuth,  async (req, res) => {
+router.post('/', ensureAuth, async (req, res) => {
     try{
         req.body.user = req.user.id 
         await Story.create(req.body)
@@ -45,7 +45,7 @@ router.get('/', ensureAuth, async (req, res) => {
 
 // @ desc GET Show single story
 // @route GET /stories/:id
-router.get('/:id', ensureAuth , async (req, res) => {
+router.get('/:id', ensureAuth, async (req, res) => {
     try { 
         let story = await Story.findById(req.params.id)
         .populate('user')
@@ -66,7 +66,7 @@ router.get('/:id', ensureAuth , async (req, res) => {
 
 // @desc Show edit page
 //@route GET /stories/edit/:id
-router.get('/edit/:id', ensureAuth, async (req, res) => {
+router.get('/edit/:id', ensureAuth,async (req, res) => {
     try {
         
     const story = await Story.findOne({
@@ -92,7 +92,7 @@ router.get('/edit/:id', ensureAuth, async (req, res) => {
 
 // @desc Show Update story
 //@route PUT /stories/:id
-router.put('/:id', ensureAuth, async (req, res) => {     
+router.put('/:id', ensureAuth,async (req, res) => {     
     try{
 
         let story = await Story.findById(req.params.id).lean()
